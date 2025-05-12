@@ -1,0 +1,94 @@
+/* theme.css */
+:root {
+    --background: #fff;
+    --text-color: #000;
+    --heading-color: #333;
+    --container-background: #f8f8f8;
+    --button-background: #404660;
+    --button-text-color: #fff;
+    --button-hover-background: #3A4059;
+    --toggle-size: 12px;
+}
+
+
+
+[data-theme='dark'] {
+    --background: #121212;
+    --text-color: #e0e0e0;
+    --heading-color: #f0f0f0;
+    --container-background: #1e1e1e; /* Darker container background */
+    --button-background: #2b3044;
+    --button-text-color: #ffffff;
+    --button-hover-background: #1e2230;
+}
+
+
+body {
+    background-color: var(--background);
+    color: var(--text-color);
+}
+
+.container {
+    background-color: var(--container-background);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--heading-color);
+}
+
+button.continue-application {
+    color: var(--button-text-color);
+    background: var(--button-background);
+}
+
+button.continue-application:hover {
+    background: var(--button-hover-background);
+}
+
+.theme-toggle {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+}
+
+.theme-checkbox {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 3.75em;
+    height: 1.875em;
+    background: linear-gradient(to right, #efefef 50%, #2a2a2a 50%) no-repeat;
+    background-size: 205%;
+    background-position: 0;
+    transition: 0.4s;
+    border-radius: 99em;
+    position: relative;
+    cursor: pointer;
+    font-size: var(--toggle-size);
+}
+
+.theme-checkbox::before {
+    content: "";
+    width: 1.25em;
+    height: 1.25em;
+    position: absolute;
+    top: 0.313em;
+    left: 0.313em;
+    background: linear-gradient(to right, #efefef 50%, #2a2a2a 50%) no-repeat;
+    background-size: 205%;
+    background-position: 100%;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+.theme-checkbox:checked::before {
+    left: calc(100% - 1.25em - 0.313em);
+    background-position: 0;
+}
+
+.theme-checkbox:checked {
+    background-position: 100%;
+}

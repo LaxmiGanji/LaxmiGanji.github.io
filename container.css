@@ -1,0 +1,318 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 10px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+}
+
+.section {
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.section .heading {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: #333;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.section .heading::before {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(to right, #ff9966, #ff5e62);
+    border-radius: 2px;
+}
+
+.home {
+    text-align: center;
+}
+
+.home h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.home .name {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.home .post {
+    font-size: 1.5rem;
+    color: #555;
+}
+
+.home .post .typing-text {
+    color: #333;
+    font-weight: bold;
+}
+
+.button {
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    padding-block: 0.5rem;
+    padding-inline: 1.25rem;
+    background-color: rgb(0 107 179);
+    border-radius: 9999px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffff;
+    gap: 10px;
+    font-weight: bold;
+    border: 3px solid #ffffff4d;
+    outline: none;
+    overflow: hidden;
+    font-size: 15px;
+}
+
+.button-container {
+    text-align: center !important;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+    transform: scale(1.05);
+    border-color: #fff9;
+}
+
+.button:hover .icon {
+    transform: translate(4px);
+}
+
+.button:hover::before {
+    animation: shine 1.5s ease-out infinite;
+}
+
+.button::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background-image: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0) 30%,
+        rgba(255, 255, 255, 0.8),
+        rgba(255, 255, 255, 0) 70%
+    );
+    top: 0;
+    left: -100px;
+    opacity: 0.6;
+}
+
+@keyframes shine {
+    0% {
+        left: -100px;
+    }
+
+    60% {
+        left: 100%;
+    }
+
+    to {
+        left: 100%;
+    }
+}
+
+.home .share {
+    margin-top: 1rem;
+}
+
+.home .share a {
+    margin: 0 0.5rem;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.home .share a:hover {
+    color: #555;
+}
+
+.about .content {
+    margin-bottom: 2rem;
+}
+
+.about .content .name {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.about .skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.about .skills .progress {
+    flex: 1;
+    background: #f8f8f8;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+.about .skills .progress h3 {
+    margin-bottom: 1rem;
+}
+
+.about .skills .progress .bar {
+    background: #ddd;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.about .skills .progress .bar span {
+    display: block;
+    height: 1rem;
+    background: #333;
+    border-radius: 0.5rem;
+    
+}
+
+.service .box-container,
+.projects .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.service .box,
+.projects .box {
+    flex: 1 1 200px;
+    background: #fff;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.service .box h3, .projects .box h3 {
+    font-size: 1.5rem; /* Adjust the value as needed */
+}
+
+.service .box h3, .projects .box h3 {
+    font-size: 1.5rem; /* Adjust the value as needed */
+    font-weight: bold;
+}
+
+.service .box i,
+.projects .box i {
+    font-size: 2rem;
+    color: #333;
+}
+
+.projects .box .github-link {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #333;
+    color: #fff;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.projects .box .github-link:hover {
+    background-color: #555;
+}
+
+.education .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.education .box {
+    flex: 1 1 200px;
+    background: #fff;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.education .box .year {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.education .box h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.contact .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.contact form {
+    flex: 1;
+    background: #fff;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact form .box {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+}
+
+.contact form .btn {
+    display: inline-block;
+    padding: 0.5rem 2rem;
+    background: #333;
+    color: #fff;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact form .btn:hover {
+    background-color: #555;
+}
+
+.contact .content {
+    flex: 1;
+}
+
+.contact .content .icons {
+    margin-bottom: 1rem;
+}
+
+.contact .content .icons h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact .content .icons p {
+    font-size: 0.875rem;
+    color: #555;
+}

@@ -1,0 +1,282 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-image: url('path/to/your/dark-background-image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #fff;
+    
+}
+
+header {
+    
+    background: linear-gradient(145deg, #000000 0%, #808080 50%, rgb(136, 148, 160) 100%);
+    color: black;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header .user {
+    margin-bottom: 1rem;
+}
+
+header .user img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+header .user .name {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0.5rem 0;
+}
+
+header .user .post {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ddd;
+}
+header .navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 3px;
+    margin: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+
+header .navbar ul li {
+    margin: 0 1rem;
+    position: relative;
+    padding: 8px 12px;
+    border-radius: 7px;
+    transition: background-color 0.3s ease;
+}
+header .navbar ul li a {
+    color: #333;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: block;
+}
+
+
+header .navbar ul li:hover {
+    background-color: #5e9fcb;
+}
+
+header .navbar ul li:hover a {
+    color: white;
+}
+
+
+header .navbar ul li::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: white;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+header .navbar ul li:hover::after {
+    width: 100%;
+}
+
+
+@media (max-width: 768px) {
+    header .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    header .navbar ul li {
+        margin: 0.5rem 0;
+    }
+
+    header .navbar ul li a {
+        font-size: 1rem;
+    }
+}
+
+
+
+.info-heading {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px lightblue;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 1.5rem;
+}
+
+.info-heading:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgb(11, 11, 254, 0.3);
+    
+    cursor: pointer;
+}
+
+.info-heading h3 {
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    font-size: 1.2rem;
+    position: relative;
+    margin: 0;
+}
+
+.info-heading h3::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 2px;
+    background-color: #333;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+.info-heading h3:hover::after {
+    width: 100%;
+    cursor: pointer;
+}
+
+.info-heading .name span {
+    color: #007acc;
+    font-weight: bold;
+}
+
+.info-heading .post span.typing-text {
+    color: #ff6600;
+    font-weight: bold;
+}
+
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.social-icons .example-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icons .example-2 .icon-content {
+    position: relative;
+    margin: 0 10px; /* Adjust margin as needed for the gap between icons */
+}
+
+.social-icons .example-2 .icon-content .tooltip {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.social-icons .example-2 .icon-content:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+    top: -50px;
+}
+
+.social-icons .example-2 .icon-content a {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #333;
+    transition: all 0.3s ease-in-out;
+}
+
+.social-icons .example-2 .icon-content a:hover {
+    box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
+    transform: scale(1.1);
+}
+
+.social-icons .example-2 .icon-content a i {
+    position: relative;
+    z-index: 1;
+    font-size: 16px;
+}
+
+.social-icons .example-2 .icon-content a .filled {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #000;
+    transition: all 0.3s ease-in-out;
+}
+
+.social-icons .example-2 .icon-content a:hover .filled {
+    height: 100%;
+}
+
+/* Social media specific styles */
+.social-icons .example-2 .icon-content a[data-social="facebook"] .filled,
+.social-icons .example-2 .icon-content a[data-social="facebook"] ~ .tooltip {
+    background-color: #3b5998;
+}
+
+.social-icons .example-2 .icon-content a[data-social="twitter"] .filled,
+.social-icons .example-2 .icon-content a[data-social="twitter"] ~ .tooltip {
+    background-color: #1da1f2;
+}
+
+.social-icons .example-2 .icon-content a[data-social="github"] .filled,
+.social-icons .example-2 .icon-content a[data-social="github"] ~ .tooltip {
+    background-color: #0b0b0b;
+}
+
+.social-icons .example-2 .icon-content a[data-social="pinterest"] .filled,
+.social-icons .example-2 .icon-content a[data-social="pinterest"] ~ .tooltip {
+    background-color: #bd081c;
+}
+
+.social-icons .example-2 .icon-content a[data-social="linkedin"] .filled,
+.social-icons .example-2 .icon-content a[data-social="linkedin"] ~ .tooltip {
+    background-color: #0077b5;
+}
