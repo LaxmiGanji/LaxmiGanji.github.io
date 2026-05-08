@@ -3,7 +3,7 @@ import { useRef } from "react";
 import { GraduationCap, Award } from "lucide-react";
 
 const education = [
-  { title: "Bachelor's Degree", desc: "Pursuing B.Tech in Computer Science Engineering", icon: GraduationCap },
+  { title: "Bachelor's Degree", desc: "Pursuing B.Tech in Computer Science Engineering, with an Aggregate of 8.0 CGPA", icon: GraduationCap },
   { title: "Intermediate", desc: "Completed with 87%", icon: Award },
   { title: "Schooling", desc: "Completed with 10.0 CGPA", icon: Award },
 ];

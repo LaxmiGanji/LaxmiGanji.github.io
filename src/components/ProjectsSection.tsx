@@ -7,8 +7,8 @@ const projects = [
     title: "ERP System",
     subtitle: "7 Modules",
     desc: "A web-based College Management System built with the MERN stack featuring 7 integrated modules.",
-    tech: ["React", "Node.js", "MongoDB", "Express"],
-    link: "https://github.com/LaxmiGanji/ERP_SPHN",
+    tech: ["React", "Node.js", "MongoDB", "Express", "Cloudinary", "AWS EC2", "JWT", "OAuth", "Mongoose"],
+    link: "https://github.com/LaxmiGanji/ECAP_SPHN",
     accent: "from-primary/20 to-accent/10",
   },
   {
@@ -16,7 +16,7 @@ const projects = [
     subtitle: "ML + Web",
     desc: "A smart cooking assistant integrating ML (NLP, CNN) with React frontend and Flask backend.",
     tech: ["React", "Flask", "NLP", "CNN", "SQLite"],
-    link: "https://github.com/LaxmiGanji/Culinary_Creations",
+    link: "https://github.com/LaxmiGanji/Culinary-Creations",
     accent: "from-accent/20 to-primary/10",
   },
   {

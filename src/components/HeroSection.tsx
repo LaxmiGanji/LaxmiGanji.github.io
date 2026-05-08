@@ -100,7 +100,7 @@ const HeroSection = () => {
             Hire Me
           </a>
           <a
-            href="https://docs.google.com/document/d/1SOHIihdg_HY_EQy-yH9fBwCYbjoOMBN3/"
+            href="https://docs.google.com/document/d/12KE41V3_E4zzr5KrYJtbqkGlK18HDb-g/edit?usp=sharing&ouid=107341274477212754451&rtpof=true&sd=true"
             target="_blank"
             rel="noopener noreferrer"
             className="px-8 py-3 rounded-full border border-border text-foreground/80 font-heading font-medium text-sm tracking-wide hover:border-primary/50 hover:text-primary transition-all"
